@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#只实现了登陆12306
 import requests
 from lxml import etree
 def captcha(index):#将图片坐标转换为图片序列
@@ -27,7 +28,7 @@ def login():
     with open('captcha.jpg','wb')as fn:#下载并打开验证码
         fn.write(code.content)
     formdata={
-        'answer':captcha(input('输入验证码的图片序号>>')),
+        'answer':captcha(input('输入验证码的图片序号>>')),#序号之间用逗号分隔
         'login_site':'E',
         'rand':'sjrand',
     }
