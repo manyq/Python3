@@ -33,7 +33,7 @@ data = {
     'service': 'http://i.upc.edu.cn/dcp/index.jsp',
     'serviceName': 'null',
     'loginErrCnt': loginErrCnt,
-    'username': '1607010320',
+    'username': input('输入学号：'),
     'password': passwd,
     'lt': lt,
 }
