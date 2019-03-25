@@ -26,8 +26,8 @@ def login(local_ip,MAC):
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
     }
     data={
-        'userId': 1607010320,
-        'password': 'myq055060',
+        'userId': input('输入学号：'),
+        'password': input('输入密码：'),
         'service': 'cmcc',
         'queryString': 'wlanuserip%3D{}%26wlanacname%3D%26nasip%3D172.22.242.22%26wlanparameter%3D{}%26url%3Dhttp%3A%2F%2Fwww.msftconnecttest.com%2Fredirect%26userlocation%3Dethtrunk%2F62%3A2911.0'.format(local_ip,MAC.lower()),
         'operatorPwd':'',
