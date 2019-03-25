@@ -3,6 +3,7 @@ import socket
 from requests import post
 from psutil import net_if_addrs
 
+#获取你电脑的MAC地址
 def get_MAC():
     MAC = []
     for k, v in net_if_addrs().items():
@@ -11,6 +12,7 @@ def get_MAC():
             if '-' in address and len(address)==17:
                 MAC.append(address)
     return MAC[-1]
+#获取电脑的IP地址
 def get_host_ip():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
